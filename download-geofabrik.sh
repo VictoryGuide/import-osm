@@ -18,9 +18,14 @@ rm -f *.mbtiles
 rm -f *.txt
 rm -f *.yml
 
-download-geofabrik update
-download-geofabrik -v download $AREA
- 
+FILENAME=${AREA}.osm.pbf
+FILEURL=http://download.geofabrik.de/north-america/us/${AREA}-latest.osm.pbf
+
+echo "--------------------------------------------"
+echo Downloading ${FILENAME} from ${FILEURL}
+echo "--------------------------------------------"
+wget -o ${FILENAME} ${FILEURL}
+
 ls *.osm.pbf  -la
 osmconvert  --out-statistics  ${AREA}.osm.pbf  > ./osmstat.txt
 
