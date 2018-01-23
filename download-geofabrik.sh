@@ -19,4 +19,4 @@ FILEURL=http://download.geofabrik.de/north-america/us/${AREA}-latest.osm.pbf
 echo "--------------------------------------------"
 echo Downloading ${FILENAME} from ${FILEURL}
 echo "--------------------------------------------"
-wget -o ${FILENAME} ${FILEURL}
+wget -O ${FILENAME} ${FILEURL}
