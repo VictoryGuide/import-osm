@@ -20,3 +20,6 @@ echo "--------------------------------------------"
 echo Downloading ${FILENAME} from ${FILEURL}
 echo "--------------------------------------------"
 wget -O ${FILENAME} ${FILEURL}
+
+ls *.osm.pbf  -la
+osmconvert  --out-statistics  ${AREA}.osm.pbf  > ./osmstat.txt
