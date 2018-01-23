@@ -19,9 +19,9 @@ RUN apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys B97B0AFCAA1A4
  && ln -s /usr/lib/libgeos_c.so /usr/lib/libgeos.so \
  && rm -rf /var/lib/apt/lists/*
 
- # add  github.com/julien-noblet/download-geofabrik
-RUN go get github.com/julien-noblet/download-geofabrik \
- && go install  github.com/julien-noblet/download-geofabrik \
+ # add  github.com/victoryguide/download-geofabrik
+RUN go get github.com/victoryguide/download-geofabrik \
+ && go install  github.com/victoryguide/download-geofabrik \
  && download-geofabrik update \
  # add  github.com/lukasmartinelli/pgclimb
  && go get github.com/lukasmartinelli/pgclimb \
